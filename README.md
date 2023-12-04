@@ -1,6 +1,10 @@
 # go-scratch-web
 Go言語によるWebフレームワークの開発
 
+## ディレクトリ
+- net-only/
+  net(net/httpなどは使わない)を使ったtcpレベルでの接続テスト
+
 ## VSCode拡張機能
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go)
   - 拡張機能「Go」を入れるだけで、汎用的で優れたGo言語のサポート機能を使うことができます。
