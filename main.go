@@ -14,14 +14,16 @@ func main() {
 	}
 	fmt.Println(listener)
 
-	conn, err := listener.Accept()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	fmt.Println(conn)
+	for {
+		conn, err := listener.Accept()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fmt.Println(conn)
 
-	handle(conn)
+		handle(conn)
+	}
 }
 
 func handle(conn net.Conn) {
