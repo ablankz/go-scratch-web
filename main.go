@@ -12,12 +12,14 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	fmt.Println(listener)
 
 	conn, err := listener.Accept()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+	fmt.Println(conn)
 
 	handle(conn)
 }
@@ -33,7 +35,7 @@ func handle(conn net.Conn) {
 	}
 
 	fmt.Println("request:")
-	fmt.Println(buf[:n])
+	fmt.Println(string(buf[:n]))
 
 	responseData := "response"
 
