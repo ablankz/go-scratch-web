@@ -22,7 +22,7 @@ func main() {
 		}
 		fmt.Println(conn)
 
-		handle(conn)
+		go handle(conn)
 	}
 }
 
